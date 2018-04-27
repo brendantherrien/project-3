@@ -34,7 +34,9 @@
           <option value="designer">Designer</option>          
           <option value="student">Student</option>
           <option value="other">Other</option>  
-        </select>           
+        </select>  
+        
+        <input type="text" id="other-title" name="user_other" placeholder="Your Job Role">         
       </fieldset>
       
       <fieldset class="shirt">
@@ -53,7 +55,7 @@
         <div>
           <label for="design">Design:</label>
           <select id="design" name="user_design">
-            <option>Select Theme</option>
+            <option value="select_theme">Select Theme</option>
             <option value="js puns">Theme - JS Puns</option>
             <option value="heart js">Theme - I &#9829; JS</option>
           </select>
@@ -62,6 +64,7 @@
         <div id="colors-js-puns" class="">
           <label for="color">Color:</label>
           <select id="color">
+            <option value="please">Please select a T-shirt theme</option>
             <option value="cornflowerblue">Cornflower Blue (JS Puns shirt only)</option>
             <option value="darkslategrey">Dark Slate Grey (JS Puns shirt only)</option> 
             <option value="gold">Gold (JS Puns shirt only)</option> 
@@ -74,14 +77,13 @@
 
       <fieldset class="activities">
         <legend>Register for Activities</legend>
-        <label><input type="checkbox" name="all"> Main Conference — $200</label>
-        <label><input type="checkbox" name="js-frameworks"> JavaScript Frameworks Workshop — Tuesday 9am-12pm, $100</label>
-        <label><input type="checkbox" name="js-libs"> JavaScript Libraries Workshop — Tuesday 1pm-4pm, $100</label>
-        <label><input type="checkbox" name="express"> Express Workshop — Tuesday 9am-12pm, $100</label>
-        <label><input type="checkbox" name="node"> Node.js Workshop — Tuesday 1pm-4pm, $100</label>          
-        <label><input type="checkbox" name="build-tools"> Build tools Workshop — Wednesday 9am-12pm, $100</label>
-        <label><input type="checkbox" name="npm"> npm Workshop — Wednesday 1pm-4pm, $100</label>
-                  	
+        <label><input type="checkbox" name="all" overlap="0" cost="200"> Main Conference — $200</label>
+        <label><input type="checkbox" name="js-frameworks" overlap="1" cost="100"> JavaScript Frameworks Workshop — Tuesday 9am-12pm, $100</label>
+        <label><input type="checkbox" name="js-libs" overlap="2" cost="100"> JavaScript Libraries Workshop — Tuesday 1pm-4pm, $100</label>
+        <label><input type="checkbox" name="express" overlap="1" cost="100"> Express Workshop — Tuesday 9am-12pm, $100</label>
+        <label><input type="checkbox" name="node" overlap="2" cost="100"> Node.js Workshop — Tuesday 1pm-4pm, $100</label>          
+        <label><input type="checkbox" name="build-tools" overlap="3" cost="100"> Build tools Workshop — Wednesday 9am-12pm, $100</label>
+        <label><input type="checkbox" name="npm" overlap="4" cost="100"> npm Workshop — Wednesday 1pm-4pm, $100</label>
       </fieldset>
       <fieldset>
         <legend>Payment Info</legend>
@@ -136,11 +138,11 @@
           </select> 	                  	         
         </div>
 
-        <div>
+        <div id="paypal">
         	<p>If you selected the PayPal option we'll take you to Paypal's site to set up your billing information, when you click “Register” below.</p>
-        </div> 
+        </div>  
 
-        <div>
+        <div id="bitcoin">
         	<p>If you selected the Bitcoin option we'll take you to the Coinbase site to set up your billing information. Due to the nature of exchanging Bitcoin, all Bitcoin transactions will be final.</p>
         </div>                  
 
@@ -151,5 +153,7 @@
     </form>
 
 	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="js/scripts.js"></script>
 </body>
 </html>

@@ -41,6 +41,10 @@ form {
 	background: #85b5ca;
 }
 
+#errors {
+    color: #f00;
+}
+
 fieldset,
 legend,
 button {
@@ -133,6 +137,10 @@ button:hover {
 
 .credit-card {
 	margin-top: 1.25em;
+}
+
+.disabled {
+    color: #777;
 }
 
 /* ================================= 
